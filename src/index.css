@@ -55,7 +55,6 @@ p {
   color: #333;
 } */
 
-
 * {
   margin: 0;
   padding: 0;
@@ -114,6 +113,7 @@ nav img {
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
+  margin: 0.5rem 1.5rem;
 }
 
 nav .checkbox {
@@ -139,13 +139,6 @@ ul {
   transition: left 0.3s;
 }
 
-/* .nav-links ul li{
-    list-style: none;
-    display: inline-block;
-    padding: 8px 12px;
-    position: relative;
-} */
-
 ul li a {
   padding: 0.5rem 1rem;
   border: 2px solid transparent;
@@ -155,25 +148,23 @@ ul li a {
   transition: 0.3s;
 }
 
-/* ul li::after{
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: var(--extra-color-red);
-    display: block;
-    margin: auto;
-    transition: 0.5s;
-} */
-
 ul li a:hover {
   border-top-color: var(--secondary-color);
   border-bottom-color: var(--secondary-color);
+}
+
+.fa-brands {
+  margin: 0.5rem;
 }
 
 /* The body part---background color*/
 .main-content {
   background-color: var(--primary-color);
   /* background-image: url(images/EasterEgg/EasterEgg1.png); */
+}
+
+.active {
+  color: var(--secondary-color);
 }
 
 /*--------------------------Home Page---------------------------------------------------*/
@@ -228,7 +219,7 @@ ul li a:hover {
 }
 
 .right-container {
-  background-image: url(images/Homepage/green\ background.png);
+  background-image: url(./assets/images/Homepage/greenBackground.png);
 
   display: grid;
   place-items: center;
@@ -244,7 +235,6 @@ ul li a:hover {
 .image img {
   width: min(25rem, 90%);
   border-radius: 100%;
-
 }
 
 /*-----------for the secrect module in the Home page------------------*/
@@ -272,6 +262,9 @@ ul li a:hover {
   cursor: pointer;
 }
 
+.action-links a {
+  margin-right: 0.5rem;
+}
 
 /*----------------------Portfolio-------------------------------------*/
 /*If have time, to set the demo video part*/
@@ -304,7 +297,8 @@ ul li a:hover {
 }
 
 .portfolio-col {
-  flex-basis: 32%;
+  flex-basis: 31.5%;
+  padding: 2rem;
   border-radius: 10px;
   margin-bottom: 30px;
   position: relative;
@@ -324,16 +318,16 @@ ul li a:hover {
 
 .portfolio-col .layer {
   background: transparent;
-  height: 100%;
+  height: 75%;
   width: 100%;
   position: absolute;
-  top: 0;
+  top: 10rem;
   left: 0;
   transition: 0.5s;
 }
 
 .portfolio-col .layer:hover {
-  background: rgba(241, 164, 76, 0.7)
+  background: rgba(241, 164, 76, 0.7);
 }
 
 .portfolio-col .layer h3 {
@@ -352,6 +346,14 @@ ul li a:hover {
 .portfolio-col .layer:hover h3 {
   bottom: 49%;
   opacity: 1;
+}
+
+.portfolio-col h2 {
+  color: red;
+}
+
+.portfolio-col h5 {
+  color: blue;
 }
 
 /*-----------------------Portfolio-detail part----------------------*/
@@ -415,12 +417,11 @@ ul li a:hover {
   display: block;
 }
 
-.music-pic:target~.music-pic,
-.bank-pic:target~.bank-pic,
-.ball-pic:target~.ball-pic {
+.music-pic:target ~ .music-pic,
+.bank-pic:target ~ .bank-pic,
+.ball-pic:target ~ .ball-pic {
   display: none;
 }
-
 
 /*---------------------------CV-------------------------------------*/
 .cv-container {
@@ -471,7 +472,9 @@ ul li a:hover {
   grid-template-columns: repeat(2, 1fr);
   font-size: 1.1rem;
 }
-
+.left-tl-content {
+  width: 70%;
+}
 .right-title {
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -497,6 +500,7 @@ ul li a:hover {
   font-size: 1.1rem;
   color: var(--text-dark);
   text-transform: uppercase;
+  font-weight: 700;
 }
 
 .tl-title-2 {
@@ -730,10 +734,10 @@ ul li a:hover {
   color: #666;
 }
 
-.container .contactForm .inputBox input:focus~span,
-.container .contactForm .inputBox input:valid~span,
-.container .contactForm .inputBox textarea:focus~span,
-.container .contactForm .inputBox textarea:valid~span {
+.container .contactForm .inputBox input:focus ~ span,
+.container .contactForm .inputBox input:valid ~ span,
+.container .contactForm .inputBox textarea:focus ~ span,
+.container .contactForm .inputBox textarea:valid ~ span {
   color: lightcoral;
   font-size: 12px;
   transform: translateY(-2rem);
@@ -749,10 +753,9 @@ ul li a:hover {
   font-size: 18px;
 }
 
-
 /*----------------Responsive design--------------*/
 
-@media(max-width: 750px) {
+@media (max-width: 750px) {
   nav .checkbox {
     display: block;
   }
@@ -769,7 +772,7 @@ ul li a:hover {
     gap: 3rem;
   }
 
-  nav #check:checked~ul {
+  nav #check:checked ~ ul {
     left: 0;
   }
 
@@ -826,7 +829,6 @@ ul li a:hover {
     flex-direction: column;
   }
 
-
   /*-----for CV only--------*/
   .timeline {
     grid-template-columns: repeat(1, 1fr);
@@ -848,8 +850,6 @@ ul li a:hover {
     transform: translateX(-50%);
   }
 
-
-
   /*-----for ABOUT ME only--------*/
 
   .skill-container {
@@ -860,7 +860,6 @@ ul li a:hover {
     border-bottom: 1px var(--secondary-color) solid;
     border-right: none;
   }
-
 
   /*-----for CONTACT only--------*/
   .contact {
@@ -885,8 +884,7 @@ ul li a:hover {
   }
 }
 
-@media(max-width: 460px) {
-
+@media (max-width: 460px) {
   /*-------------Home page-----------*/
   .right-container {
     max-width: 90%;
@@ -898,7 +896,7 @@ ul li a:hover {
   }
 }
 
-@media(max-width:300px) {
+@media (max-width: 300px) {
   .left-container H1 {
     font-size: 1.5em;
     font-weight: 600;
@@ -908,9 +906,7 @@ ul li a:hover {
     font-size: 1 em;
     line-height: 1em;
   }
-
 }
-
 
 /*-------------footer--------------*/
 .footer {

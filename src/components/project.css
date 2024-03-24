@@ -1,0 +1,9 @@
+.loading-content {
+  padding: 10px 18px;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  display: inline-block;
+  margin: 30px 0;
+  border-radius: 5px;
+}
