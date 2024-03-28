@@ -43,7 +43,7 @@ const CVPage = () => {
                 {MyInfo["work experience"].map((w) => {
                   return (
                     <>
-                      <article key={w.workplace}>
+                      <article className="left-tl-content" key={w.workplace}>
                         <h5 className="tl-title">{w.workplace}</h5>
                         <p className="para">{w["time-period"]}</p>
                       </article>

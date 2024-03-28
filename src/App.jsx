@@ -9,7 +9,7 @@ import Layout from "./pages/Layout";
 function App() {
   return (
     <>
-      <BrowserRouter basename="/dynamic-page/">
+      <BrowserRouter basename="/dynamic-page">
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
