@@ -8,9 +8,10 @@ const CVPage = () => {
           <div class="cv-container">
             <div class="action-links">
               <a
-                href="../assets/CV.pdf"
+                href="/dynamic-page/CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
+                download="/dynamic-page/CV.pdf"
               >
                 DOWNLOAD CV
               </a>
